@@ -3,7 +3,7 @@
 FROM alpine:3.11
 
 RUN set -ex \
-    && apk add --no-cache ca-certificates
+    && apk add --no-cache ca-certificates curl
 
 COPY ./registry /bin/registry
 COPY ./config-example.yml /etc/docker/registry/config.yml
